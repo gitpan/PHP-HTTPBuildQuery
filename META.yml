@@ -21,4 +21,4 @@ requires:
   URI::Escape: 0
 resources:
   repository: http://github.com/mschilli/php-httpbuildquery-perl-master.git
-version: 0.04
+version: 0.05

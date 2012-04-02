@@ -13,7 +13,7 @@ require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(http_build_query http_build_query_utf8);
 
-our $VERSION = "0.04";
+our $VERSION = "0.05";
 
 ###########################################
 sub http_build_query {
@@ -120,7 +120,10 @@ sub scalar_serialize {
 ###########################################
     my($data, $prefix, $separator, $escaper, $sofar) = @_;
 
-    return "$sofar=" . $escaper->($data);
+    my $escaped_data = defined $data ? $escaper->($data) : '';
+    my $new_sofar    = defined $sofar ? $sofar : '';
+
+    return "$new_sofar=$escaped_data";
 }
 
 1;
