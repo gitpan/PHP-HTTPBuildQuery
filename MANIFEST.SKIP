@@ -4,6 +4,8 @@ blib
 CVS
 .cvsignore
 docs
+MYMETA.yml
+MYMETA.json
 MANIFEST.bak
 adm/release
 .git
